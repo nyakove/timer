@@ -1,0 +1,44 @@
+<head>
+<title></title>
+<link rel='stylesheet' href='timer.css' />
+<link rel="shortcut icon" href="favicon.png"> 
+</head>
+<body>
+<div id='container'>
+<div id='timer'>
+</div>
+</div>
+<script>
+var title = document.getElementsByTagName('title')[0];
+
+function time() {
+a = new Date();
+seconds = a.getSeconds();
+if (seconds < 10) {
+	seconds = '0' + seconds;
+	}
+minutes = a.getMinutes();
+if (minutes < 10) {
+	minutes = '0' + minutes;
+	}
+hours = a.getHours();
+if (hours < 10) {
+	hours = '0' + hours;
+}
+if (minutes == '00' && seconds == '00') {
+	document.getElementById('timer').style.color = 'yellow';
+	document.getElementById('timer').style.backgroundColor = 'green';
+	}
+else {
+	document.getElementById('timer').style.color = 'red';
+	document.getElementById('timer').style.backgroundColor = '';
+}	
+timeNow = hours + ':' + minutes + ':' + seconds;
+
+timer.innerHTML = timeNow;
+title.innerHTML = timeNow;
+}
+document.onload = time();
+setInterval(time, 1000);
+</script>
+</body>
