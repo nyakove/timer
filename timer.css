@@ -20,10 +20,6 @@ html:-moz-full-screen-ancestor {
 	color: red;
  }
  
-#timer:-webkit-full-screen {
-	font-size: 400;
-}
- 
 #fullscreen {
 	position: absolute;
 	bottom: 0;
