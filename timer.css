@@ -1,3 +1,15 @@
+ html:-webkit-full-screen-ancestor {
+    background-color: #fff;
+}
+html:-moz-full-screen-ancestor {
+    background-color: #fff;
+}
+ 
+ body {
+	 background-color: white;
+	 
+ }
+ 
  #timer {
 	font-family: Segoe UI;
 	font-size: 300;
@@ -5,6 +17,22 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-color: red;
+	color: red;
  }
  
+#timer:-webkit-full-screen {
+	font-size: 400;
+}
+ 
+#fullscreen {
+	position: absolute;
+	bottom: 0;
+	right: 10;
+	opacity: 0.3;
+}
+
+#fullscreen:hover {
+	opacity: 1;
+}
+
+

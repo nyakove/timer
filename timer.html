@@ -7,6 +7,9 @@
 <div id='container'>
 <div id='timer'>
 </div>
+<div id='fullscreen'>
+<img src='fullscreen.png' />
+</div>
 </div>
 <script>
 var title = document.getElementsByTagName('title')[0];
@@ -25,20 +28,23 @@ hours = a.getHours();
 if (hours < 10) {
 	hours = '0' + hours;
 }
-if (minutes == '00' && seconds == '00') {
-	document.getElementById('timer').style.color = 'yellow';
-	document.getElementById('timer').style.backgroundColor = 'green';
-	}
-else {
-	document.getElementById('timer').style.color = 'red';
-	document.getElementById('timer').style.backgroundColor = '';
-}	
+
 timeNow = hours + ':' + minutes + ':' + seconds;
 
 timer.innerHTML = timeNow;
 title.innerHTML = timeNow;
 }
+
+function fullScreen() {
+	if(document.webkitIsFullScreen) {
+		document.webkitExitFullscreen();
+		return;
+	}
+	document.body.webkitRequestFullscreen();
+}
+
 document.onload = time();
 setInterval(time, 1000);
+document.getElementById('fullscreen').addEventListener('click', fullScreen)
 </script>
 </body>
