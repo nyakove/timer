@@ -38,11 +38,10 @@ title.innerHTML = timeNow;
 
 function fullScreen() {
 	if(document.webkitIsFullScreen) {
-		document.webkitExitFullscreen();
 		document.getElementById('date').style.display = 'none';
+		document.webkitExitFullscreen();
 		return;
 	}
-	addDate();
 	document.body.webkitRequestFullscreen();
 	document.getElementById('date').style.display = 'inherit';
 }
@@ -62,6 +61,7 @@ date.innerHTML = dateTimeFormat.format(a);
 document.onload = time();
 document.onload = addDate();
 setInterval(time, 1000);
+setInterval(addDate, 1000);
 document.getElementById('fullscreen').addEventListener('click', fullScreen);
 document.addEventListener('keydown', F11Check);
 
