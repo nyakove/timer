@@ -7,9 +7,11 @@
 <div id='container'>
 <div id='timer'>
 </div>
+<div id='date'>середа, 17 жовтня 2018 р.
+</div>
+</div>
 <div id='fullscreen'>
 <img src='fullscreen.png' />
-</div>
 </div>
 <script>
 var title = document.getElementsByTagName('title')[0];
@@ -37,18 +39,28 @@ title.innerHTML = timeNow;
 function fullScreen() {
 	if(document.webkitIsFullScreen) {
 		document.webkitExitFullscreen();
+		document.getElementById('date').style.display = 'none';
 		return;
 	}
+	addDate();
 	document.body.webkitRequestFullscreen();
+	document.getElementById('date').style.display = 'inherit';
 }
 
 function F11Check(event) {
-if(event.key == 'F11') {
+if(event.key == 'F11' || event.key == 'Escape' || event.key == 'Esc' ) {
 	event.preventDefault();
 	}
 }
 
+function addDate() {
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+var dateTimeFormat = new Intl.DateTimeFormat('uk-UA', options);
+date.innerHTML = dateTimeFormat.format(a);
+}
+
 document.onload = time();
+document.onload = addDate();
 setInterval(time, 1000);
 document.getElementById('fullscreen').addEventListener('click', fullScreen);
 document.addEventListener('keydown', F11Check);

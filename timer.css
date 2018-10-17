@@ -7,17 +7,29 @@ html:-moz-full-screen-ancestor {
  
  body {
 	 background-color: white;
-	 
- }
- 
- #timer {
-	font-family: Segoe UI;
-	font-size: 300;
- 	position: fixed; 
+}
+
+ #container {
+	height: 500px;
+	position: absolute; 
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: red;
+ }
+
+ #timer {
+	font-family: Segoe UI;
+	font-size: 300;
+	text-align: center;
+ }
+ 
+ #date {
+	display: none;
+	font-family: Segoe UI;
+	font-size: 70;
+	left: 200px;
+	text-align: center;
  }
  
 #fullscreen {
