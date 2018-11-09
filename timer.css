@@ -1,21 +1,19 @@
- html:-webkit-full-screen-ancestor {
-    background-color: #fff;
+html{
+   background-color: #FFFAF0;
 }
-html:-moz-full-screen-ancestor {
-    background-color: #fff;
-}
- 
- body {
-	 background-color: white;
+
+body {
+	 background-color: inherit;
 }
 
  #container {
 	height: 500px;
-	position: absolute; 
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: red;
+	color: #2F4F4F;
+  background-color: inherit;
  }
 
  #timer {
@@ -23,7 +21,7 @@ html:-moz-full-screen-ancestor {
 	font-size: 300;
 	text-align: center;
  }
- 
+
  #date {
 	display: none;
 	font-family: Segoe UI;
@@ -31,7 +29,7 @@ html:-moz-full-screen-ancestor {
 	left: 200px;
 	text-align: center;
  }
- 
+
 #fullscreen {
 	position: absolute;
 	bottom: 10;
@@ -42,5 +40,3 @@ html:-moz-full-screen-ancestor {
 #fullscreen:hover {
 	opacity: 1;
 }
-
-

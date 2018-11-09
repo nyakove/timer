@@ -1,10 +1,10 @@
 <head>
 <title></title>
 <link rel='stylesheet' href='timer.css' />
-<link rel="shortcut icon" href="favicon.png"> 
+<link rel="shortcut icon" href="favicon.png">
 </head>
-<body>
-<div id='container'>
+<body bgcolor="#FFFAF0">
+<div id='container' bgcolor="#FFFAF0">
 <div id='timer'>
 </div>
 <div id='date'>середа, 17 жовтня 2018 р.
@@ -19,15 +19,15 @@ function time() {
 a = new Date();
 seconds = a.getSeconds();
 if (seconds < 10) {
-	seconds = '0' + seconds;
-	}
+  seconds = '0' + seconds;
+  }
 minutes = a.getMinutes();
 if (minutes < 10) {
-	minutes = '0' + minutes;
-	}
+  minutes = '0' + minutes;
+  }
 hours = a.getHours();
 if (hours < 10) {
-	hours = '0' + hours;
+  hours = '0' + hours;
 }
 
 timeNow = hours + ':' + minutes + ':' + seconds;
@@ -37,19 +37,31 @@ title.innerHTML = timeNow;
 }
 
 function fullScreen() {
-	if(document.webkitIsFullScreen) {
-		document.getElementById('date').style.display = 'none';
-		document.webkitExitFullscreen();
-		return;
-	}
-	document.body.webkitRequestFullscreen();
-	document.getElementById('date').style.display = 'inherit';
+  if (document.body.webkitRequestFullscreen) {
+      if(document.webkitIsFullScreen) {
+          document.getElementById('date').style.display = 'none';
+          document.webkitExitFullscreen();
+          return;
+  }
+    document.body.webkitRequestFullscreen();
+    document.getElementById('date').style.display = 'inherit';
+}
+
+if (document.body.mozRequestFullScreen !== undefined) {
+    if(document.mozFullScreen) {
+        document.getElementById('date').style.display = 'none';
+        document.mozCancelFullScreen();
+        return;
+}
+  document.body.mozRequestFullScreen();
+  document.getElementById('date').style.display = 'inherit';
+}
 }
 
 function F11Check(event) {
 if(event.key == 'F11' || event.key == 'Escape' || event.key == 'Esc' ) {
-	event.preventDefault();
-	}
+  event.preventDefault();
+  }
 }
 
 function addDate() {
