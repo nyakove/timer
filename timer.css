@@ -18,14 +18,14 @@ body {
 
  #timer {
   font-family: 'Ubuntu', sans-serif;
-	font-size: 250;
+	font-size: 250pt;
 	text-align: center;
  }
 
  #date {
 	display: none;
   font-family: 'Ubuntu', sans-serif;
-	font-size: 60;
+	font-size: 60pt;
 	text-align: center;
  }
 
