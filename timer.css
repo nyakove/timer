@@ -17,14 +17,14 @@ body {
  }
 
  #timer {
-  font-family: 'Cousine', monospace;
+  font-family: 'Ubuntu', sans-serif;
 	font-size: 250;
 	text-align: center;
  }
 
  #date {
 	display: none;
-  font-family: 'Cousine', monospace;
+  font-family: 'Ubuntu', sans-serif;
 	font-size: 60;
 	text-align: center;
  }
