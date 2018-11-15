@@ -8,6 +8,7 @@ body {
 
  #container {
 	height: 500px;
+  max-width: 90%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -20,6 +21,12 @@ body {
   font-family: 'Ubuntu', sans-serif;
 	font-size: 250pt;
 	text-align: center;
+ }
+
+ @media screen and (max-width: 600px) {
+   #timer {
+	font-size: 150pt;
+   }
  }
 
  #date {
